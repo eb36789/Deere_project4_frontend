@@ -22,9 +22,19 @@ class App extends Component {
       this.setState({
         meals: response.data.meals,
       })
-      
     })
   }
+
+  getAllMeals() {
+    axios.get(`${backendUrl}/meals`)
+    // axios.get("http://localhost:3001/api/meals")
+    .then((response) => {
+      this.setState({
+        meals: response.data.meals,
+      })
+    })
+  }
+
 addMeal = (e) => {
   e.preventDefault();
   console.log(e.target.name.value);
@@ -49,25 +59,26 @@ addIngredient = (e) => {
       amount: e.target.amount.value
        })
     .then((response) => {
-      console.log(response)
-      // get the correct meal from this.state.meals
-      let updatedMeal = this.state.meals.find((meal) => {
-        return meal.id === mealId;
-      });
-      // push the new ingredient to the ingredients array
-      updatedMeal.Ingredients.push(response.data.ingredient);
-      console.log(updatedMeal);
-      const newMealArray = this.state.meals.map((meal) => {
-        if (meal.id === updatedMeal.id) {
-          return updatedMeal;
-        } else {
-          return meal;
-        }
-      });
-      // setState for the updated ingredients
-      this.setState({
-        meals: newMealArray,
-      });
+      this.getAllMeals()
+    //   console.log(response)
+    //   // get the correct meal from this.state.meals
+    //   let updatedMeal = this.state.meals.find((meal) => {
+    //     return meal.id === mealId;
+    //   });
+    //   // push the new ingredient to the ingredients array
+    //   updatedMeal.Ingredients.push(response.data.ingredient);
+    //   console.log(updatedMeal);
+    //   const newMealArray = this.state.meals.map((meal) => {
+    //     if (meal.id === updatedMeal.id) {
+    //       return updatedMeal;
+    //     } else {
+    //       return meal;
+    //     }
+    //   });
+    //   // setState for the updated ingredients
+    //   this.setState({
+    //     meals: newMealArray,
+    //   });
     });
 };
 
