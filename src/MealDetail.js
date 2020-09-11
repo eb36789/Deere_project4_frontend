@@ -8,6 +8,7 @@ render(){
     const mealDetail = this.props.meals.find((meal) => {
         return meal.id == this.props.match.params.id;
     });
+    console.log(mealDetail)
     const mealIngredients = mealDetail.Ingredients.map(ingredient => {
         return <li key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient}</li>
     })
@@ -20,6 +21,8 @@ render(){
             <form onSubmit={this.props.addIngredient}>
             <input type="hidden" name="mealId" value={mealDetail.id} />
                 <input type="text" name="ingredient" />
+                <input type="number" name="amount" />
+                <input type="text" name="measurement" />
                 <input type="submit" value="add ingredient"/>
             </form>
         </div>

@@ -30,10 +30,11 @@ addMeal = (e) => {
   console.log(e.target.name.value);
   axios.post(`${backendUrl}/meals`, { name: e.target.name.value,}).then((response) => {
     let tempArray = this.state.meals
+    response.data.meal.Ingredients=[]
     tempArray.push(response.data.meal);
     this.setState({
-    meals: tempArray
-    // console.log(response.data.meal);
+    meals: tempArray,
+     // console.log(response.data.meal);
   })
   })
 }
@@ -42,10 +43,11 @@ addIngredient = (e) => {
   e.preventDefault();
   let mealId = e.target.mealId.value;
   axios
-    .post(`${backendUrl}/meals/INEEDMEALIDHERE/newingredient`, {
-      ingredient: e.target.title.value,
-      mealId: e.target.mealId.value,
-    })
+    .post(`${backendUrl}/meals/${mealId}/newingredient`, {
+      ingredient: e.target.ingredient.value,
+      measurement: e.target.measurement.value,
+      amount: e.target.amount.value
+       })
     .then((response) => {
       console.log(response)
       // get the correct meal from this.state.meals
@@ -55,7 +57,7 @@ addIngredient = (e) => {
       // push the new ingredient to the ingredients array
       updatedMeal.Ingredients.push(response.data.ingredient);
       console.log(updatedMeal);
-      const newIngredientsArray = this.state.meals.map((meal) => {
+      const newMealArray = this.state.meals.map((meal) => {
         if (meal.id === updatedMeal.id) {
           return updatedMeal;
         } else {
@@ -64,7 +66,7 @@ addIngredient = (e) => {
       });
       // setState for the updated ingredients
       this.setState({
-        ingredients: newIngredientsArray,
+        meals: newMealArray,
       });
     });
 };
