@@ -20,9 +20,8 @@ render(){
             <h5>add a new ingredient here</h5>
             <form onSubmit={this.props.addIngredient}>
             <input type="hidden" name="mealId" value={mealDetail.id} />
-                <input type="text" name="ingredient" />
-                <input type="number" name="amount" />
-                <input type="text" name="measurement" />
+                <input type="number" placeholder="amount (e.g. 1)" name="amount" />
+                <input type="text" placeholder="measurement (e.g. cup)" name="measurement" /><input type="text" placeholder="ingredient (e.g. love)" name="ingredient" />
                 <input type="submit" value="add ingredient"/>
             </form>
         </div>

@@ -6,14 +6,29 @@ import { Link } from "react-router-dom";
 class AllMeals extends Component {
 render(){
     const allMeals = this.props.meals.map((meal) => {
-        return <li key={meal.id}>
-            <Link to={`/meals/${meal.id}`}>{meal.name}</Link></li>;
+        return <div key={meal.id}>
+            <div className="AllMealsPage">
+                
+                <Link to={`/meals/${meal.id}`}>
+                <div className="card">
+            <img src="placeholder.png" alt="No Image Available" />
+            <div className="container">
+                {meal.name}
+                </div>
+                </div>
+                </Link>
+                </div>
+                </div>;
     })
     return (
-        <div>
-          <h1> YUM! YUM! YUM!</h1>
-          <h6>(click meal name to see ingredients list)</h6>
-            <ul>{allMeals}</ul>
+        <div className="AllMealsPage">
+          <span><h1> YUM! YUM! YUM!</h1> <h6>(click meal name to see ingredients list)</h6></span>
+            {/* <ul>{allMeals}</ul> */}
+            <div className="card">
+            {/* <div className="gallery"> */}
+                {allMeals}
+                {/* </div> */}
+            </div>
             <h3>Want to create a new meal?</h3>
             <form onSubmit={this.props.addMeal}>
             {/* <input type="hidden" name="ingredient" value="add ingredient(s) for this meal" /> */}
