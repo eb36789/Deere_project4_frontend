@@ -15,7 +15,7 @@ render(){
     })
     // console.log(mealDetail);
     return (
-        <div>
+        <div className="content">
             <h1>ingredients for {mealDetail.name}</h1>
             <ul>{mealIngredients}</ul>
             <h5>Need to add a new ingredient?</h5>

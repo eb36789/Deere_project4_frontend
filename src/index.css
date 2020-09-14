@@ -12,6 +12,9 @@ html {
 }
 /* source: google fonts */
 
+input {
+  font-family: The Girl Next Door;
+}
 
 /* make home page background image */
 /* how to from: https://css-tricks.com/perfect-full-page-background-image/ */
@@ -34,12 +37,26 @@ footer {
 
 header {
   font-size: 60px;
+  font-weight: bolder;
 }
 
 nav {
+  overflow: hidden;
 
+  display: flex;
+  justify-content: space-evenly
 }
 
+nav a {
+text-align: center;
+font-size: 17px;
+font-weight: bold;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
 footer {
   text-align: center;
 }
@@ -64,10 +81,10 @@ footer {
     height: 200px;
    text-align: center;
     margin: 5px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-transform: capitalize
   }
 
   /* On mouse-over, add a deeper shadow */
@@ -81,17 +98,18 @@ footer {
 
 a:link {
   text-decoration: none;
-  color: rgb(114, 114, 187)
+  color: navy
 }
 
 /* visited link */
 a:visited {
-  color: darkslategray
+ color: navy
 }
 
 /* mouse over link */
 a:hover {
   color: navy;
+  font-weight: bolder;
 }
   /* BELOW HERE I AM PLAYING WITH CARD DISPLAY - ATTEMPT 1*/
   /* body{

@@ -4,6 +4,8 @@ import { Route, Link, Switch } from "react-router-dom";
 import MealDetail from "./MealDetail.js";
 import AllMeals from "./AllMeals.js";
 import Home from "./Home.js";
+import WeeklyPlanner from "./PlannedMeal.js";
+import MonthlyPlanner from "./MonthlyPlanner.js";
 import axios from "axios";
 const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/api";
 
@@ -92,14 +94,17 @@ addIngredient = (e) => {
       <header>Freeman Family Meals</header>
       <nav>
       <Link to="/">Home Page</Link>
-      <br></br>
       <Link to="/all">Check out all the meals</Link>
+      <Link to="/WeeklyPlanner">Weekly Planner</Link>
+      <Link to="/Monthly Planner">Monthly Planner</Link>
       </nav>
       <main>
 
         <Switch>
   <Route exact path="/" component={() => <Home/>}/>
-          <Route exact
+  <Route exact path="/WeeklyPlanner" component={() => <WeeklyPlanner/>}/>
+  <Route exact path="/MonthlyPlanner" component={() => <MonthlyPlanner/>}/>
+  <Route exact
           path="/all" 
           component={() => 
           <AllMeals 
@@ -108,6 +113,9 @@ addIngredient = (e) => {
           <Route path="/meals/:id" component={(routerProps) => <MealDetail {...routerProps} meals={this.state.meals} addIngredient={this.addIngredient}/>} />
         </Switch>
       </main>
+      <footer>
+        designed with love by Mom for the Freeman Family 2020
+      </footer>
       </div>
   )
   }

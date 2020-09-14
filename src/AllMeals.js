@@ -20,17 +20,16 @@ render(){
                 </div>;
     })
     return (
-        <div className="AllMealsPage">
-          <span><h1> YUM! YUM! YUM!</h1> <h6>(click meal name to see ingredients list)</h6></span>
+        <div className="Content">
+          <h3>Want to create a new meal?</h3>
           <form onSubmit={this.props.addMeal}>
-            {/* <input type="hidden" name="ingredient" value="add ingredient(s) for this meal" /> */}
                 <input type="text" name="name" />
                 <input type="submit" value="add meal"/>
             </form>
+            <div><h1> YUM! YUM! YUM!</h1> <h4>Click a meal to see ingredients list</h4> </div>
             <div className="gallery">
                 {allMeals}
                 </div>
-                    <h3>Want to create a new meal?</h3>
         </div>
     )
 }
