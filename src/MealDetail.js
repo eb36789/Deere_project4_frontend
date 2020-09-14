@@ -10,14 +10,15 @@ render(){
     });
     console.log(mealDetail)
     const mealIngredients = mealDetail.Ingredients.map(ingredient => {
-        return <li key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient}</li>
+        return <div className="ingredients" key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient}
+     <i class="fas fa-camera"></i></div>
     })
     // console.log(mealDetail);
     return (
         <div>
             <h1>ingredients for {mealDetail.name}</h1>
             <ul>{mealIngredients}</ul>
-            <h5>add a new ingredient here</h5>
+            <h5>Need to add a new ingredient?</h5>
             <form onSubmit={this.props.addIngredient}>
             <input type="hidden" name="mealId" value={mealDetail.id} />
                 <input type="number" placeholder="amount (e.g. 1)" name="amount" />
