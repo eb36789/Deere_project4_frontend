@@ -4,7 +4,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import MealDetail from "./MealDetail.js";
 import AllMeals from "./AllMeals.js";
 import Home from "./Home.js";
-import WeeklyPlanner from "./PlannedMeal.js";
+import WeeklyPlanner from "./WeeklyPlanner.js";
 import MonthlyPlanner from "./MonthlyPlanner.js";
 import axios from "axios";
 const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/api";
@@ -63,25 +63,6 @@ addIngredient = (e) => {
        })
     .then((response) => {
       this.getAllMeals()
-    //   console.log(response)
-    //   // get the correct meal from this.state.meals
-    //   let updatedMeal = this.state.meals.find((meal) => {
-    //     return meal.id === mealId;
-    //   });
-    //   // push the new ingredient to the ingredients array
-    //   updatedMeal.Ingredients.push(response.data.ingredient);
-    //   console.log(updatedMeal);
-    //   const newMealArray = this.state.meals.map((meal) => {
-    //     if (meal.id === updatedMeal.id) {
-    //       return updatedMeal;
-    //     } else {
-    //       return meal;
-    //     }
-    //   });
-    //   // setState for the updated ingredients
-    //   this.setState({
-    //     meals: newMealArray,
-    //   });
     });
 };
 
@@ -96,7 +77,7 @@ addIngredient = (e) => {
       <Link to="/">Home Page</Link>
       <Link to="/all">Check out all the meals</Link>
       <Link to="/WeeklyPlanner">Weekly Planner</Link>
-      <Link to="/Monthly Planner">Monthly Planner</Link>
+      <Link to="/MonthlyPlanner">Monthly Planner</Link>
       </nav>
       <main>
 

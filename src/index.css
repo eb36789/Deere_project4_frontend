@@ -53,12 +53,23 @@ font-size: 17px;
 font-weight: bold;
 }
 
+/* i don't think this is working */
 .active {
   background-color: #4CAF50;
   color: white;
 }
+
+.content {
+  background: url(https://partysavvy.com/wp-content/uploads/2017/05/2017-05-09-001-2017-05-09-064.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 footer {
   text-align: center;
+  height: 20px
 }
 
 .gallery {
