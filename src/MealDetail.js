@@ -6,6 +6,7 @@ class MealDetail extends Component {
     
 render(){
     const mealDetail = this.props.meals.find((meal) => {
+        // eslint-disable-next-line
         return meal.id == this.props.match.params.id;
     });
     console.log(mealDetail)

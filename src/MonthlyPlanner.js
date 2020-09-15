@@ -4,8 +4,33 @@ import "./index.css";
 
 let MonthlyPlanner = () => {
       return (
-        <div className="content">
-    <h1>placeholder for my grid</h1>
+        <div className="monthlycalendar">
+            
+ <h1>Sunday</h1>
+ <h1>Monday</h1>
+ <h1>Tuesday</h1>
+ <h1>Wednesday</h1>
+ <h1>Thursday</h1>
+ <h1>Friday</h1>
+ <h1>Saturday</h1> <h1>Sunday</h1>
+ <h1>Monday</h1>
+ <h1>Tuesday</h1>
+ <h1>Wednesday</h1>
+ <h1>Thursday</h1>
+ <h1>Friday</h1>
+ <h1>Saturday</h1> <h1>Sunday</h1>
+ <h1>Monday</h1>
+ <h1>Tuesday</h1>
+ <h1>Wednesday</h1>
+ <h1>Thursday</h1>
+ <h1>Friday</h1>
+ <h1>Saturday</h1> <h1>Sunday</h1>
+ <h1>Monday</h1>
+ <h1>Tuesday</h1>
+ <h1>Wednesday</h1>
+ <h1>Thursday</h1>
+ <h1>Friday</h1>
+ <h1>Saturday</h1>
     </div>
       )
     };

@@ -10,7 +10,9 @@ render(){
             <div className="AllMealsPage">
                 <Link to={`/meals/${meal.id}`}>
                 <div className="card">
-            <img src="/images/placeholder.png" alt="No Image Available" />
+                 <img src=
+                //  '{meal.image}' onError="this.src=
+                "/images/placeholder.png" alt="No meal view available" />
             <div className="container">
                 {meal.name}
                 </div>

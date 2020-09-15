@@ -60,16 +60,47 @@ font-weight: bold;
 }
 
 .content {
-  background: url(https://partysavvy.com/wp-content/uploads/2017/05/2017-05-09-001-2017-05-09-064.jpg) no-repeat center center fixed;
+  background: url(https://image.apost.com/media/articletranslation/2018/06/25/12/be53ce80cd2b67e87a7fc5b5dc162961_500x1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: 100%;
+  position: relative;
+  top: 60px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.weeklycalendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2);
+  grid-gap: 20px
+}
+
+.monthlycalendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4);
+  grid-row-gap: 50px;
+  grid-column-gap: 20px
+}
+
+h1 {
+  border-top: dotted navy 5px;
+
+  width: auto;
 }
 
 footer {
   text-align: center;
-  height: 20px
+  height: 40px;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .gallery {
