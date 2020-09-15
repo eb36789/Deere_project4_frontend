@@ -9,12 +9,14 @@ import MultiweekPlanner from "./MultiweekPlanner.js";
 import axios from "axios";
 const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/api";
 
+console.log(backendUrl)
 class App extends Component {
   constructor(props) {
     super();
     this.state = {
       meals: [],
-      ingredients: []
+      ingredients: [],
+      images: []
     }
   }
 
@@ -72,6 +74,10 @@ addIngredient = (e) => {
     <div className="App">
       <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door"></link>
+        <link rel="stylesheet"
+  href="/all.css"></link>
+     <link rel="stylesheet"
+  href="/all.js"></link>
       <header>Freeman Family Meals</header>
       <nav>
       <Link to="/">Home Page</Link>
@@ -95,7 +101,7 @@ addIngredient = (e) => {
         </Switch>
       </main>
       <footer>
-        designed with love (heart) by Mom (heart) for the Freeman Family 2020
+        designed with love <i class="far fa-heart"></i> by Mom <i class="far fa-heart"></i> for the Freeman Family 2020
       </footer>
       </div>
   )

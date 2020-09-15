@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family:   The Girl Next Door;
+  /* font-family: font-awesome; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -78,11 +79,12 @@ font-weight: bold;
     left: 0;
     right: 0;
     overflow: auto;
-    border: solid orange 5px;
  }
 
+ i {
+   font-size: 10px
+ }
 .spinner {
-border: solid red 5px;
 }
 
 /* code below applies to the All Meals page only */
@@ -124,6 +126,7 @@ border: solid red 5px;
 /* code below applies to meal detail page only  */
 .content {
 align-content: center;
+margin-top: 100px
 }
 
 .recipecardmealname{
@@ -157,7 +160,7 @@ h1 {
 }
 
 .recipecard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* code below applies to the planner pages only */

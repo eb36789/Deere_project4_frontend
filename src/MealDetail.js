@@ -11,8 +11,10 @@ render(){
     });
     console.log(mealDetail)
     const mealIngredients = mealDetail.Ingredients.map(ingredient => {
-        return <div className="ingredients" key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient} 
-     <i src="https://kit.fontawesome.com/73164da8e3.js"></i></div>
+        return <div className="ingredients" key={ingredient.id}>
+            {ingredient.amount} {ingredient.measurement} {ingredient.ingredient} 
+     <i class="fas fa-trash-alt" size="sm"></i>
+     </div>
     })
     // console.log(mealDetail);
     return (

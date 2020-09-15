@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 class AllMeals extends Component {
 render(){
+    console.log(this.props.meals)
     const allMeals = this.props.meals.map((meal) => {
         return <div key={meal.id}>
             <div className="AllMealsPage">
                 <Link to={`/meals/${meal.id}`}>
                 <div className="card">
-                 <img src=
-                //  '{meal.image}' onError="this.src=
-                "/images/placeholder.png" alt="No meal view available" />
+                 <img src={meal.image ? meal.image : "/images/placeholder.png"} 
+                alt="No meal view available" />
             <div className="container">
                 {meal.name}
                 </div>
