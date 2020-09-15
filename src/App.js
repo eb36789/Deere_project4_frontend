@@ -5,7 +5,7 @@ import MealDetail from "./MealDetail.js";
 import AllMeals from "./AllMeals.js";
 import Home from "./Home.js";
 import WeeklyPlanner from "./WeeklyPlanner.js";
-import MonthlyPlanner from "./MonthlyPlanner.js";
+import MultiweekPlanner from "./MultiweekPlanner.js";
 import axios from "axios";
 const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/api";
 
@@ -77,14 +77,14 @@ addIngredient = (e) => {
       <Link to="/">Home Page</Link>
       <Link to="/all">Check out all the meals</Link>
       <Link to="/WeeklyPlanner">Weekly Planner</Link>
-      <Link to="/MonthlyPlanner">Monthly Planner</Link>
+      <Link to="/MultiweekPlanner">Multi-Week Planner</Link>
       </nav>
       <main>
 
         <Switch>
   <Route exact path="/" component={() => <Home/>}/>
   <Route exact path="/WeeklyPlanner" component={() => <WeeklyPlanner/>}/>
-  <Route exact path="/MonthlyPlanner" component={() => <MonthlyPlanner/>}/>
+  <Route exact path="/MultiweekPlanner" component={() => <MultiweekPlanner/>}/>
   <Route exact
           path="/all" 
           component={() => 
@@ -95,7 +95,7 @@ addIngredient = (e) => {
         </Switch>
       </main>
       <footer>
-        designed with love by Mom for the Freeman Family 2020
+        designed with love (heart) by Mom (heart) for the Freeman Family 2020
       </footer>
       </div>
   )

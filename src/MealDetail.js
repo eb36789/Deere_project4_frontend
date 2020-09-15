@@ -11,14 +11,20 @@ render(){
     });
     console.log(mealDetail)
     const mealIngredients = mealDetail.Ingredients.map(ingredient => {
-        return <div className="ingredients" key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient}
-     <i class="fas fa-camera"></i></div>
+        return <div className="ingredients" key={ingredient.id}>{ingredient.amount} {ingredient.measurement} {ingredient.ingredient} 
+     <i src="https://kit.fontawesome.com/73164da8e3.js"></i></div>
     })
     // console.log(mealDetail);
     return (
         <div className="content">
-            <h1>ingredients for {mealDetail.name}</h1>
-            <ul>{mealIngredients}</ul>
+            <div className="recipecard">
+            <div className="recipecardmealname">
+                <h1>{mealDetail.name}</h1>
+            </div>
+            <div className="recipecardingredients">
+                <ul>{mealIngredients}</ul>
+            </div>
+            </div>
             <h5>Need to add a new ingredient?</h5>
             <form onSubmit={this.props.addIngredient}>
             <input type="hidden" name="mealId" value={mealDetail.id} />

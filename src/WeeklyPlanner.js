@@ -4,14 +4,19 @@ import "./index.css";
 
 let WeeklyPlanner = () => {
   return (
+      <div className="plannercontent">
+           <div className="comingsoon">
+          <h3> COMING SOON! </h3>
+          </div>
     <div className="weeklycalendar">
-    <h1>Sunday</h1>
- <h1>Monday</h1>
- <h1>Tuesday</h1>
- <h1>Wednesday</h1>
- <h1>Thursday</h1>
- <h1>Friday</h1>
- <h1>Saturday</h1>
+<div className="dayoftheweek">Sunday</div>
+ <div className="dayoftheweek">Monday</div>
+ <div className="dayoftheweek">Tuesday</div>
+ <div className="dayoftheweek">Wednesday</div>
+ <div className="dayoftheweek">Thursday</div>
+ <div className="dayoftheweek">Friday</div>
+ <div className="dayoftheweek">Saturday</div>
+ </div>
  </div>
   );
 };
