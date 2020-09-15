@@ -96,8 +96,9 @@ font-weight: bold;
   }
   
   img {
-    height: auto;
-    width: 200px
+    height: 140px;
+    width: 200px;
+    overflow: hidden
   }
 
   .card {

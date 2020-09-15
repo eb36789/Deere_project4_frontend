@@ -101,7 +101,7 @@ addIngredient = (e) => {
         </Switch>
       </main>
       <footer>
-        designed with love <i class="far fa-heart"></i> by Mom <i class="far fa-heart"></i> for the Freeman Family 2020
+        designed with love <i class="fas fa-heart"></i> by Mom <i class="fas fa-heart"></i> for the Freeman Family <i class="far fa-copyright"></i>   2020
       </footer>
       </div>
   )

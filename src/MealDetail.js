@@ -13,7 +13,7 @@ render(){
     const mealIngredients = mealDetail.Ingredients.map(ingredient => {
         return <div className="ingredients" key={ingredient.id}>
             {ingredient.amount} {ingredient.measurement} {ingredient.ingredient} 
-     <i class="fas fa-trash-alt" size="sm"></i>
+     <i class="fas fa-trash-alt" ></i>
      </div>
     })
     // console.log(mealDetail);
