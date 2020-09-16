@@ -6,7 +6,7 @@ class Home extends Component {
       return (
         <div className="homepagecontent">
             <div className="spinner">
-<iframe title="spinning choice wheel" src={`https://wheeldecide.com/e.php?${this.props.wheelMeals}col=winter&t=Freeman+Family+Dinners&time=5`} width="550" height="525" scrolling="no" frameBorder="0"></iframe>
+<iframe title="spinning choice wheel" src={`https://wheeldecide.com/e.php?${this.props.wheelMeals}col=winter&t=Freeman+Family+Dinners&time=5`} width="500" height="600" scrolling="no" frameBorder="0"></iframe>
 </div>
 </div> 
     )

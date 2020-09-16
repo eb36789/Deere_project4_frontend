@@ -82,6 +82,8 @@ font-weight: bold;
  }
 
 .spinner {
+  margin-right: 40px;
+  margin-top: 35px
 }
 
 /* code below applies to the All Meals page only */
@@ -95,7 +97,6 @@ font-weight: bold;
   img {
     height: 140px;
     width: 200px;
-    border: solid orange 5px
   }
 
   .card {
@@ -112,7 +113,6 @@ font-weight: bold;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-transform: capitalize;
-    border: solid red 5px
   }
 
   /* On mouse-over, add a deeper shadow */
@@ -122,7 +122,6 @@ font-weight: bold;
 
 .container {
   padding: 2px 16px;
-  border: solid yellow 5px
 }
 
 /* code below applies to meal detail page only  */

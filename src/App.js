@@ -42,13 +42,6 @@ class App extends Component {
     })
   }
 
-// updateWheelMeals=()=> {
-//   let mealsArray = [this.meals.name];
-//   // for (let i=0;i<arr.length;i++)
-
-
-// {/* <iframe title="spinning choice wheel" src="https://wheeldecide.com/e.php?c1=Tacos&c2=Cheesy+Potato+Soup&col=winter&t=Freeman+Family+Dinners&time=5" width="550" height="525" scrolling="no" frameBorder="0"></iframe> */}
-
   getAllMeals() {
     axios.get(`${backendUrl}/meals`)
     // axios.get("http://localhost:3001/api/meals")
