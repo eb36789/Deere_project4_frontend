@@ -14,6 +14,7 @@ render(){
         return <div className="ingredients" key={ingredient.id}>
             {ingredient.amount} {ingredient.measurement} {ingredient.ingredient} 
      <i class="fas fa-trash-alt" ></i>
+     <i class="fas fa-pencil-alt" ></i>
      </div>
     })
     // console.log(mealDetail);

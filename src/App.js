@@ -54,6 +54,16 @@ addMeal = (e) => {
   })
 }
 
+//THIS IS WIP
+deleteMeal = async (e) => {
+  e.prevent.preventDefault();
+  //not sure if row below should read let mealId = e.target.mealId OR parseInt(e.target.id)
+  let mealId = e.target.id;
+  let arrayIndex = e.target.getAttribute("arrayindex");
+  await axios.delete(`${backendUrl}/meals/${mealId}}`)
+
+}
+
 addIngredient = (e) => {
   e.preventDefault();
   let mealId = e.target.mealId.value;
@@ -67,6 +77,17 @@ addIngredient = (e) => {
       this.getAllMeals()
     });
 };
+
+//THIS IS WIP
+deleteIngredient = (e) => {
+  e.preventDefault();
+  let ingredientId = e.target.ingredientId.value;
+}
+
+//THIS IS WIP
+deleteIngredient = (e) => {
+  e.preventDefault();}
+
 
   render() {
     // console.log(this.state);
@@ -96,8 +117,9 @@ addIngredient = (e) => {
           component={() => 
           <AllMeals 
           meals={this.state.meals} 
-          addMeal={this.addMeal}/>} />
-          <Route path="/meals/:id" component={(routerProps) => <MealDetail {...routerProps} meals={this.state.meals} addIngredient={this.addIngredient}/>} />
+          addMeal={this.addMeal}/>}
+          deleteMeal={this.deleteMeal} />
+  <Route path="/meals/:id" component={(routerProps) => <MealDetail {...routerProps} meals={this.state.meals} addIngredient={this.addIngredient}/>}  deleteIngredient={this.deleteIngredient} editIngredient={this.editIngredient}/>
         </Switch>
       </main>
       <footer>

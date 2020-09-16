@@ -7,7 +7,7 @@ body {
 }
 
 html {
-  background: #b0dfe2;
+  background: #c4dbf0;
   color: navy;
 }
 /* source: google fonts */
@@ -81,9 +81,6 @@ font-weight: bold;
     overflow: auto;
  }
 
- i {
-   font-size: 10px
- }
 .spinner {
 }
 
@@ -98,7 +95,7 @@ font-weight: bold;
   img {
     height: 140px;
     width: 200px;
-    overflow: hidden
+    border: solid orange 5px
   }
 
   .card {
@@ -106,13 +103,16 @@ font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 200px;
-    height: 200px;
+    height: 220px;
+    object-fit: contain;
    text-align: center;
+   font-weight: bold;
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    text-transform: capitalize
+    text-transform: capitalize;
+    border: solid red 5px
   }
 
   /* On mouse-over, add a deeper shadow */
@@ -122,12 +122,13 @@ font-weight: bold;
 
 .container {
   padding: 2px 16px;
+  border: solid yellow 5px
 }
 
 /* code below applies to meal detail page only  */
 .content {
 align-content: center;
-margin-top: 100px
+margin-top: 100px;
 }
 
 .recipecardmealname{
@@ -146,6 +147,7 @@ h1 {
   margin-right: auto;
   margin-top: 20px;
   text-align: left;
+  font-size: 20px;
   font-weight: bold;
   border: solid rgb(219, 233, 247) 20px;
   width: 600px;
@@ -162,6 +164,12 @@ h1 {
 
 .recipecard:hover {
   box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+i {
+  font-size: 10px;
+  padding-left: 5px;
+  padding-right: 5px
 }
 
 /* code below applies to the planner pages only */
