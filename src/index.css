@@ -152,6 +152,7 @@ h1 {
   border: solid rgb(219, 233, 247) 20px;
   width: 600px;
   height: auto;
+  position: relative;
   background: url(https://st2.depositphotos.com/2087307/12324/i/450/depositphotos_123246144-stock-photo-blue-wood-background.jpg) center center fixed;
   background-size: 600px auto;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

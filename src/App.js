@@ -16,19 +16,38 @@ class App extends Component {
     this.state = {
       meals: [],
       ingredients: [],
-      images: []
+      images: [],
+      wheelMeals: []
     }
   }
 
   componentDidMount() {
     axios.get(`${backendUrl}/meals`)
-    // axios.get("http://localhost:3001/api/meals")
+    // axios.get("http://localhost:3001/api/meals");
+    
     .then((response) => {
+      // console.log(response.data.meals);
+      const wheelMeals = response.data.meals.map(meal => {
+        // console.log(`c${meal.id}=${meal.name}&`);
+        let mealsArray=(`c${meal.id}=${meal.name}&`);
+        let formattedMealsArray = mealsArray.replace(/ /g,"+");
+        return formattedMealsArray;
+      })
+        let formattedWheelMeals = wheelMeals.join('');
+      console.log(formattedWheelMeals);
       this.setState({
         meals: response.data.meals,
+        wheelMeals: formattedWheelMeals
       })
     })
   }
+
+// updateWheelMeals=()=> {
+//   let mealsArray = [this.meals.name];
+//   // for (let i=0;i<arr.length;i++)
+
+
+// {/* <iframe title="spinning choice wheel" src="https://wheeldecide.com/e.php?c1=Tacos&c2=Cheesy+Potato+Soup&col=winter&t=Freeman+Family+Dinners&time=5" width="550" height="525" scrolling="no" frameBorder="0"></iframe> */}
 
   getAllMeals() {
     axios.get(`${backendUrl}/meals`)
@@ -54,15 +73,19 @@ addMeal = (e) => {
   })
 }
 
-//THIS IS WIP
-deleteMeal = async (e) => {
-  e.prevent.preventDefault();
-  //not sure if row below should read let mealId = e.target.mealId OR parseInt(e.target.id)
-  let mealId = e.target.id;
-  let arrayIndex = e.target.getAttribute("arrayindex");
-  await axios.delete(`${backendUrl}/meals/${mealId}}`)
-
-}
+// //THIS IS WIP
+// deleteMeal = async (e) => {
+//   e.prevent.preventDefault();
+//   //not sure if row below should read let mealId = e.target.mealId OR parseInt(e.target.id)
+//   let mealId = e.target.id;
+//   let arrayIndex = e.target.getAttribute("arrayindex");
+//   await axios.delete(`${backendUrl}/meals/${mealId}}`);
+//   //why can it not just end right here?
+//   // const mealsCopy = this.meals;
+//   // mealsCopy.splice(arrayIndex, 1);
+//   // await setMeals([...mealsCopy]);
+//   //for above to work, i think i would need to change this all to a function rather than class and use react hooks
+// }
 
 addIngredient = (e) => {
   e.preventDefault();
@@ -78,15 +101,16 @@ addIngredient = (e) => {
     });
 };
 
-//THIS IS WIP
-deleteIngredient = (e) => {
-  e.preventDefault();
-  let ingredientId = e.target.ingredientId.value;
-}
+// //THIS IS WIP
+// deleteIngredient = (e) => {
+//   e.preventDefault();
+//   let ingredientId = e.target.ingredientId.value;
+// }
 
-//THIS IS WIP
-deleteIngredient = (e) => {
-  e.preventDefault();}
+// //THIS IS WIP
+// deleteIngredient = (e) => {
+//   e.preventDefault();}
+
 
 
   render() {
@@ -109,7 +133,7 @@ deleteIngredient = (e) => {
       <main>
 
         <Switch>
-  <Route exact path="/" component={() => <Home/>}/>
+  <Route exact path="/" component={() => <Home wheelMeals={this.state.wheelMeals}/>}/>
   <Route exact path="/WeeklyPlanner" component={() => <WeeklyPlanner/>}/>
   <Route exact path="/MultiweekPlanner" component={() => <MultiweekPlanner/>}/>
   <Route exact

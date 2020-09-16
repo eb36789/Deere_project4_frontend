@@ -15,6 +15,10 @@ render(){
                 alt="No meal view available" />
             <div className="container">
                 {meal.name}
+                <div className="deleteMealButton">
+                {/* <form onClick={this.props.deleteMeal} /> */}
+                <i className="deletemealicon" class="fas fa-trash-alt" ></i>
+                </div>
                 </div>
                 </div>
                 </Link>
@@ -31,6 +35,7 @@ render(){
             <div><h1> YUM! YUM! YUM!</h1> <h4>Click a meal to see ingredients list</h4> </div>
             <div className="gallery">
                 {allMeals}
+                {/* <button onClick={this.props.deleteMeal}>  <i className="deletemealicon" class="fas fa-trash-alt" ></i></button> */}
                 </div>
         </div>
     )
