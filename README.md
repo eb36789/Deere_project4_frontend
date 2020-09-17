@@ -20,6 +20,7 @@
 *Express
 
 *Node.js
+
 *Sequelize
 
 # Site summary
@@ -79,7 +80,7 @@ wireframes designed on diagrameditor.com
 
 ![7 day planner](https://user-images.githubusercontent.com/67026705/93477542-c6be7000-f8c0-11ea-9c44-2ff7cf2cc79e.png)
 
-<img width="751" alt="multi-weekly wireframe" src="https://user-images.githubusercontent.com/67026705/93477603-d8a01300-f8c0-11ea-899f-f6cbe92a5396.png">
+![multi-weekly wireframe]
 
 
 
